@@ -1,15 +1,26 @@
 .results {
     &-section {
         display: block;
+        font-size: 24px;
+        padding: 40px;
 
         &.hidden {
             display: none;
+        }
+
+        h2 {
+            font-size: 36px;
+
+            @media(max-width: 450px) {
+                font-size: 22px;
+            }
         }
     }
 }
 
 .error-message {
     display: block;
+    color: #f0d43a;
 
     &.hidden {
         display: none;

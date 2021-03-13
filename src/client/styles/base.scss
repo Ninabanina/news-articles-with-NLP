@@ -2,6 +2,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: #0a1f44;
+    color: #fff;
+    font-family: "Oswald", sans-serif;
 }
 
 main {
@@ -10,5 +13,24 @@ main {
 
 section {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 10px auto;
+}
+
+.btn {
+    width: 100%;
+    height: auto;
+    background: #ff1e42;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    
+    &:hover,
+    &:focus {
+        background: #c3112d;
+    }
 }

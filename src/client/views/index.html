@@ -4,29 +4,30 @@
 <head>
     <meta charset="utf-8">
     <title>News Articles with NLP</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <header>
-        <h1>Evaluating a News articles by running the Natural Language Processing (NLP).</h1>
+        <h1>Evaluating a News articles by running the Natural Language Processing (NLP)</h1>
     </header>
     <main>
         <section class="input-section">
             <form class="" onsubmit="return Client.handleSubmit(event)">
                 <input class="user-input" id="urlInput" type="text" name="input" value=""
                     placeholder="Please enter the article URL here">
+                <div class="error-message hidden" id="errorMessage"></div>
                 <input class="btn" type="submit" id="submit" value="submit"
                     onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
             </form>
-            <div class="error-message hidden" id="errorMessage"></div>
         </section>
         <section class="results-section hidden" id="results">
-            <h3>Evaluating Results:</h3>
-            <div class="results-agreement">Agreement: <span id="agreement"></span></div>
-            <div class="results-confidence">Confidence: <span id="confidence"></span></div>
-            <div class="results-subjectivity">Subjectivity: <span id="subjectivity"></span></div>
-            <div class="results-polarity">Polarity: <span id="polarity"></span></div>
+            <h2>Evaluating Results:</h2>
+            <div class="results">Agreement: <span id="agreement"></span></div>
+            <div class="results">Confidence: <span id="confidence"></span></div>
+            <div class="results">Subjectivity: <span id="subjectivity"></span></div>
+            <div class="results">Polarity: <span id="polarity"></span></div>
         </section>
     </main>
     <footer>

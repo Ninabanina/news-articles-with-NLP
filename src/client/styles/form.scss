@@ -1,12 +1,46 @@
 form {
-    border: 1px solid #545454;
-    border-radius: 3px;
-    padding: 40px;
+    padding: 0 40px;
 }
 
 input {
-    padding: 5px 20px;
+    display: block;
+    height: 40px;
     width: 100%;
-    line-height: 16px;
-    margin: 10px 0;
+    background: #0a1f44;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 1em;
+    margin-top: 1em;
+
+    @media(max-width: 450px) {
+        font-size: 18px;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+/* Style for Placeholder Text*/
+::placeholder {
+    /* Firefox, Chrome, Opera */
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
 }
