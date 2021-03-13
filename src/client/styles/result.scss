@@ -1,0 +1,17 @@
+.results {
+    &-section {
+        display: block;
+
+        &.hidden {
+            display: none;
+        }
+    }
+}
+
+.error-message {
+    display: block;
+
+    &.hidden {
+        display: none;
+    }
+}
