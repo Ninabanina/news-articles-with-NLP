@@ -56,11 +56,11 @@ async function updateUI(res) {
         resultAgreement.innerText = res.agreement;
         resultConfidence.innerText = res.confidence;
         resultSubjectivity.innerText = res.subjectivity;
-        resultPolarity.innerText = polarity(res.score_tag);
+        resultPolarity.innerText = checkPolarity(res.score_tag);
     }
 }
 
-export const polarity= (score_tag) => {
+export const checkPolarity= (score_tag) => {
     if (score_tag === "P+" || score_tag === "P") {
         return "Positive";
     } else if (score_tag === "N+" || score_tag === "N") {
