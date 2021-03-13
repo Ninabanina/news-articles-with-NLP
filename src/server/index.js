@@ -11,8 +11,6 @@ const mockAPIResponse = require('./mockAPI.js');
 const apiKey = process.env.API_KEY;
 const baseUrl = "https://api.meaningcloud.com/sentiment-2.1?key=";
 
-console.log(`Your API key is ${process.env.API_KEY}`);
-
 const app = express()
 
 app.use(express.static('dist'))
@@ -37,7 +35,7 @@ app.get('/test', function (req, res) {
 })
 
 app.post("/getResults", async(req, res) => {
-    const apiData = await fetch(`${baseUrl}${apiKey}&lang=auto&url=${req.body.formUrl}`, {
+    const apiData = await fetch(`${baseUrl}${apiKey}&lang=auto&url=${req.body.articleURL}`, {
         method: 'POST'
     });
 
@@ -45,6 +43,6 @@ app.post("/getResults", async(req, res) => {
         const data = await apiData.json();
         res.send(data);
     } catch (err) {
-        console.log(err);
+        console.log("err", err);
     }
 });
