@@ -12,3 +12,4 @@ The goal of this project is practicing with:
 ## Instruction
 
 - To start the server by run: `npm start run`
+- To start the project by run: `npm start build-dev`
